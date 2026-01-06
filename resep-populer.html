@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Resep Populer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff7f0;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #ff7a00;
+            color: white;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu li a:hover {
+            text-decoration: underline;
+        }
+
+        /* SECTION RESEP */
+        .resep {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .resep h2 {
+            color: #d35400;
+            margin-bottom: 30px;
+        }
+
+        .resep-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #ff7a00;
+            margin-bottom: 10px;
+        }
+
+        /* TOMBOL KEMBALI HOME */
+        .back-home {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff7a00;
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: 0.3s ease;
+        }
+
+        .back-home:hover {
+            background-color: #e66a00;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">🍽️ KulinerKu</div>
+    <ul class="menu">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Resep Populer</a></li>
+        <li><a href="#">Kontak</a></li>
+    </ul>
+</nav>
+
+<!-- Resep Populer -->
+<section class="resep">
+    <h2>🔥 Resep Populer</h2>
+
+    <div class="resep-container">
+        <div class="card">
+            <h3>Ayam Geprek</h3>
+            <p>Ayam crispy dengan sambal pedas favorit.</p>
+        </div>
+
+        <div class="card">
+            <h3>Nasi Goreng</h3>
+            <p>Nasi goreng sederhana dengan cita rasa khas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mie Goreng</h3>
+            <p>Mie goreng lezat dengan topping spesial.</p>
+        </div>
+
+        <div class="card">
+            <h3>Seblak</h3>
+            <p>Kerupuk pedas dengan bumbu kencur.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TOMBOL KEMBALI KE HOME -->
+<a href="WEB.html" class="back-home">🏠 Home</a>
+
+</body>
+</html>

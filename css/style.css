@@ -1,0 +1,231 @@
+:root {
+    --accent: #f4a261;
+    --bg: #ffffff;
+    --text: #333;
+    --dark-bg: #1e1e1e;
+    --dark-card: #2a2a2a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+body.dark {
+    background: var(--dark-bg);
+    color: #eee;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.8);
+    z-index: 1000;
+}
+
+body.dark nav {
+    background: rgba(30,30,30,0.8);
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: var(--accent);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* BANNER */
+.banner {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: 1s;
+}
+
+.banner-slide.active {
+    opacity: 1;
+}
+
+.banner-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3rem;
+    background: rgba(0,0,0,0.4);
+    color: white;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+}
+
+/* FILTER */
+.filter {
+    margin-top: 3rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.filter input,
+.filter select {
+    padding: 0.7rem 1rem;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    margin: 0.5rem;
+}
+
+/* CATALOG */
+.catalog {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+/* CARD */
+.card {
+    background: var(--bg);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+body.dark .card {
+    background: var(--dark-card);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.card-content button {
+    background: var(--accent);
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    background: var(--bg);
+    padding: 2rem;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 500px;
+    animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0.9); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.modal-box img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+#closeModal {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* BUTTON */
+.floating-btn, .scroll-top {
+    position: fixed;
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+}
+
+.floating-btn { bottom: 6rem; }
+.scroll-top { bottom: 1.5rem; display: none; }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Website</title>
+
+    <style>
+        :root {
+            --primary: #8B0000;
+            --bg: #f6f6f6;
+            --text: #444;
+            --card: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #8B0000, #b22222);
+            color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .header p {
+            margin-top: 10px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* SECTION */
+        .tentang {
+            padding: 60px 20px;
+        }
+
+        .tentang-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            background-color: var(--card);
+            padding: 45px;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+            animation: fadeUp 1s ease;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tentang-text h2 {
+            color: var(--primary);
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        .tentang-text p {
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .tentang-info {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 14px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .tentang-info h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        .tentang-info ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .tentang-info li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 15px;
+        }
+
+        .tentang-info li:last-child {
+            border-bottom: none;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .tentang-container {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+        }
+
+        /* TOMBOL HOME */
+        .back-home {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #8B0000, #b22222);
+            color: white;
+            text-decoration: none;
+            padding: 14px 22px;
+            border-radius: 40px;
+            font-size: 14px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            transition: 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-home:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>Katalog Resep Nusantara</h1>
+    <p>Mengenal lebih dekat website resep khas Indonesia</p>
+</div>
+
+<!-- TENTANG -->
+<section class="tentang" id="tentang">
+    <div class="tentang-container">
+
+        <div class="tentang-text">
+            <h2>Tentang Website</h2>
+            <p>
+                <strong>Katalog Resep Nusantara</strong> adalah platform digital yang
+                menyajikan berbagai resep makanan khas Indonesia dengan desain modern,
+                minimalis, dan ramah pengguna.
+            </p>
+            <p>
+                Website ini bertujuan menjadi media informasi dan pembelajaran bagi siapa
+                saja yang ingin mengenal, mencoba, dan melestarikan masakan Nusantara
+                melalui pengalaman browsing yang cepat dan nyaman.
+            </p>
+        </div>
+
+        <div class="tentang-info">
+            <h3>Fitur Utama</h3>
+            <ul>
+                <li>📖 Koleksi resep Nusantara terkurasi</li>
+                <li>🔍 Sistem pencarian & filter kategori</li>
+                <li>🌙 Mode gelap (Dark Mode)</li>
+                <li>💻 Tampilan responsif semua perangkat</li>
+            </ul>
+
+            <h3>Teknologi</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3 (Modern Layout)</li>
+                <li>JavaScript (Vanilla)</li>
+                <li>Animasi Interaktif</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- BUTTON HOME -->
+<a href="WEB.html" class="back-home">🏠 Kembali ke Home</a>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pengetahuan Dapur</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #8B0000;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background-color: white;
+            width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-body h3 {
+            margin-top: 0;
+            color: #8B0000;
+        }
+
+        .card-body p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Tombol kembali ke home */
+        .back-home {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #8B0000;
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            transition: 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-home:hover {
+            background-color: #5f0000;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🍳 Pengetahuan Dapur</h1>
+    <p>Informasi dasar dan tips penting seputar dunia memasak</p>
+</header>
+
+<div class="container">
+
+    <!-- Teknik Memasak -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Teknik Memasak">
+        <div class="card-body">
+            <h3>Teknik Memasak</h3>
+            <p>Menggoreng, menumis, merebus, dan mengukus adalah teknik dasar yang wajib diketahui.</p>
+        </div>
+    </div>
+
+    <!-- Bumbu Dapur -->
+    <div class="card">
+        <img src="https://tribratanews.polri.go.id/web/image/blog.post/79217/image" alt="Bumbu Dapur">
+        <div class="card-body">
+            <h3>Bumbu Dapur</h3>
+            <p>Bumbu seperti bawang, cabai, dan rempah-rempah memberi cita rasa khas pada masakan.</p>
+        </div>
+    </div>
+
+    <!-- Kebersihan Dapur -->
+    <div class="card">
+        <img src="https://www.99.co/id/panduan/wp-content/uploads/2025/03/26134356/dapur-1-1.jpg" alt="Kebersihan Dapur">
+        <div class="card-body">
+            <h3>Kebersihan Dapur</h3>
+            <p>Dapur yang bersih mencegah bakteri dan menjaga makanan tetap aman dikonsumsi.</p>
+        </div>
+    </div>
+
+    <!-- Penyajian Makanan -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Penyajian Makanan">
+        <div class="card-body">
+            <h3>Penyajian Makanan</h3>
+            <p>Penyajian yang menarik dapat meningkatkan selera dan nilai estetika makanan.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- TOMBOL KEMBALI KE HOME -->
+<a href="WEB.html" class="back-home">🏠 Home</a>
+
+</body>
+</html>

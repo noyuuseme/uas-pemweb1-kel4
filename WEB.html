@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Resep Nusantara</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+    <nav>
+        <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="kategori.html">Kategori</a></li>
+        <li><a href="resep-populer.html">Resep Populer</a></li>
+        <li><a href="koleksi-favorite.html">Koleksi Favorit</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="daftar.html">Daftar</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li><a href="seputar-dapur.html">Seputar Dapur</a></li>
+        <li><a href="pengetahuan-dapur.html">Pengetahuan Dapur</a></li>
+        <li><a href="tips-dasar.html">Tips Dasar</a></li>
+        </ul>
+    </nav>
+
+<button id="darkModeToggle" class="floating-btn">
+    <i class="fas fa-moon"></i>
+</button>
+
+<!-- BANNER / HERO SLIDER -->
+<header class="banner" id="home">
+    <div class="banner-slide active" style="background-image:url('img/banner\ 1.jpg')">
+        <div class="banner-content">
+            <h1>Resep Nusantara</h1>
+            <p>Cita rasa asli Indonesia</p>
+        </div>
+    </div>
+    <div class="banner-slide" style="background-image:url('img/banner\ 2.jpg')">
+        <div class="banner-content">
+            <h1>Masak Jadi Mudah</h1>
+            <p>Resep tradisional & modern</p>
+        </div>
+    </div>
+</header>
+
+<!-- FILTER -->
+<section class="filter">
+    <input type="text" id="searchBar" placeholder="Cari resep favorit...">
+    <select id="categoryFilter">
+        <option value="semua">Semua</option>
+        <option value="makanan-berat">Makanan Berat</option>
+        <option value="kue">Kue & Jajanan</option>
+        <option value="minuman">Minuman</option>
+    </select>
+</section>
+
+<!-- KATALOG -->
+<main class="catalog" id="katalog"></main>
+
+<!-- MODAL -->
+<div class="modal" id="recipeModal">
+    <div class="modal-box">
+        <span id="closeModal">&times;</span>
+        <img id="modalImage">
+        <h2 id="modalTitle"></h2>
+        <h4>Bahan</h4>
+        <ul id="modalIngredients"></ul>
+        <h4>Cara Memasak</h4>
+        <p id="modalInstructions"></p>
+    </div>
+</div>
+
+<footer id="tentang">
+    <p>© 2026 UAS Kelompok 4.</p>
+</footer>
+
+<button id="scrollTop" class="scroll-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
